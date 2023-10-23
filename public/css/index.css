@@ -1,0 +1,299 @@
+body {
+    font-family: Roboto;
+    max-width: 1349px;
+    margin: 0 auto;
+    background-color: #f7f3f0;
+}
+
+header {
+    max-width: 1349px;
+}
+.news:hover{
+    color: #c74817;
+}
+
+.shownews:hover>i{
+    transition:0.6s ease-in-out;
+    padding-left: 10px;
+}
+
+/* .banner{
+    background-image: url("../img/banner.jpg");
+    width: 100%; 
+    background-repeat: no-repeat;
+    
+    
+} */
+
+
+/* .vd-content{
+    animation: type 5s steps(40);
+    overflow: hidden;
+    white-space: nowrap;
+
+
+
+}
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 40ch;
+    }
+} */
+.border-tittle {
+    border-bottom: 1px solid #1e3a8a;
+}
+
+/* Style the tab */
+.color-tittle {
+    color:#1e3a8a ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.background-tittle {
+    background-color:#1e3a8a ;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ec6d05;
+    background-color: white;
+}
+
+.img-sp {
+    height: 350px;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.ex1 {
+    background-color: lightblue;
+    width: 1249px;
+    overflow-x: scroll;
+  }
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ec6d05;
+}
+
+.logo-img {
+    width: 46px;
+}
+
+.zoom {
+    transition: all 0.8s;
+}
+
+.thd-img {
+    height: 375px;
+}
+
+.thd-content {
+    height: 375px;
+}
+
+.thd-img-s {
+    height: 170px;
+}
+
+.sp-img-t {
+    height: 233px;
+}
+
+.sp-img-tt {
+    height: 233px;
+}
+
+.sp-img-b {
+    height: 318px;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 15px;
+    padding: 8px 14px;
+}
+
+.thd-content-s {
+    height: 66px;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ec6d05;
+    color: white;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 10px 12px;
+    border-top: none;
+}
+
+.slide-img {
+    height: 500px;
+}
+
+.uytin-img {
+    height: 280px;
+}
+
+.mhl-title {
+    top: 199px;
+}
+
+.mhlct-title {
+    top: 282px;
+}
+
+.footer-1 {
+    height: 140px;
+}
+
+.img1 {
+    height: 215px;
+}
+
+.img2 {
+    height: 100%;
+    width: 100%;
+}
+
+.img3 {
+    height: 190px;
+}
+
+.img4 {
+    height: 328px;
+}
+
+.tinbai {
+    height: 200px;
+    overflow: hidden;
+}
+
+.tinbai-img-s {
+    height: 85px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 765px) {
+    .img-sp {
+        height: 134px;
+    }
+    .img1 {
+        height: 111px;
+    }
+    .img3 {
+        height: 111px;
+    }
+    .img4 {
+        height: 112px;
+    }
+    .footer-1 {
+        height: 112px;
+    }
+    .mhlct-title {
+        top: 85px;
+    }
+    .sp-img-b {
+        height: 108px;
+    }
+    .sp-img-tt {
+        height: 203px;
+    }
+    .sp-img-t {
+        height: 106px;
+    }
+    .mhl-title {
+        top: 171px;
+    }
+    .bxl-title {
+        top: 82px;
+    }
+    .uytin-img {
+        height: 185px;
+    }
+    .uytin-img-s {
+        width: 85px;
+        height: 85px;
+    }
+    header {
+        max-width: 765px;
+        position: fixed;
+    }
+    .slide-img {
+        height: 153px;
+    }
+    .logo-img {
+        width: 46px;
+    }
+    .tbtx {
+        margin-top: 194px;
+    }
+    .tb-img {
+        height: 230px;
+    }
+    video {
+        width: 100%;
+    }
+    .vd-xv {
+        width: 100%;
+        height: 194px;
+    }
+    .thd-img {
+        height: 176px;
+    }
+    .thd-content {
+        height: 126px;
+    }
+    .thd-content-s {
+        height: 49px;
+    }
+    .td-content {
+        height: 156px;
+    }
+    .dd-img {
+        height: 295px;
+        overflow: hidden;
+    }
+    .hr-dd {
+        width: 120px;
+        border-width: 1px;
+    }
+    .map-img {
+        height: 250px;
+    }
+    .navbar-burger {
+        margin-left: 0px !important;
+    }
+    .navbar-brand,
+    .navbar-tabs {
+        align-items: center !important;
+    }
+}

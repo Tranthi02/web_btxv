@@ -1,0 +1,19 @@
+.ddsmoothmenu ul{z-index:100;list-style-type:none;margin:10px 0;}
+.ddsmoothmenu ul li{position:relative;display:inline;float:left;}
+.ddsmoothmenu ul li ul li + li{border-top:1px solid #ccc;}
+.ddsmoothmenu ul li a{padding:10px 0;font-family:Roboto,sans-serif;font-weight:bold;color:#242424;text-transform:uppercase;margin:0 10px;font-size:15px;}
+.ddsmoothmenu ul li span{float:right;padding-left:10px;}
+* html .ddsmoothmenu ul li a{display:inline-block;}
+.menu .ddsmoothmenu ul li ul{margin-top:0;position:absolute;left:0!important;display:none;visibility:hidden;width:250px;top:40px;padding:0;border:1px solid #ccc;background:#fff;}
+.menu .ddsmoothmenu ul li ul li{display:list-item;float:none;padding-left:0;margin-top:0;margin-right:0;border-bottom:1px solid rgba(255,255,255,0.2);}
+.menu .ddsmoothmenu ul li ul li a{text-transform:unset;display:block;font-weight:normal;}
+.ddsmoothmenu ul li ul li ul{top:0;}
+.menu .ddsmoothmenu ul li ul li ul{margin-left:251px;margin-top:0;}
+* html .ddsmoothmenu{height:1%;}
+.downarrowclass{position:absolute;top:12px;right:7px;display:none;}
+.rightarrowclass{position:absolute;top:10px;right:5px;}
+.ddshadow{position:absolute;left:0;top:0;width:0;height:0;background:silver;}
+.toplevelshadow{opacity:0.8;}
+@media (max-width:1199px){
+    .ddsmoothmenu ul li a{padding:10px 0;font-size: 13px;margin: 0 5px;}
+}

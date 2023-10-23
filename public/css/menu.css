@@ -1,0 +1,210 @@
+
+
+/* animation */
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #header {
+        display: flex;
+        justify-content:space-around;
+        
+    }
+    #header .logo{
+        padding: 20px;
+    }
+    #header .logo > img{
+        width: 200px;
+        height: 40px;
+    }
+    nav {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: 0 auto; */
+        z-index: 100;
+    }
+    .menu>li,
+    .menu>a {
+        display: inline-block;
+    }
+    .menu li {
+        position: relative;
+    }
+    .menu a {
+        text-decoration: none;
+        font-family: "Open Sans Condensed",sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #3c3c3c;
+        display: block;
+        padding: 1rem;
+        transition: background-color .22s ease, color .22s ease;
+    }
+    .menu a:hover {
+        /* background-color: #1e3a8a; */
+        color: #c74817;
+    }
+    .menu .menumobie{
+        display: flex;
+        align-items: center;
+    }
+    #rightarrow{
+        display: none;
+    }
+    /* sub menu */
+    .submenu .submenumobie{
+        display: flex;
+        align-items: center;
+    }
+    .submenu .submenumobie{
+        text-decoration: none;
+        font-family: "Open Sans Condensed",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #3c3c3c;
+        display: flex;
+        align-items: center;
+        transition:0.6s ease-out;
+     
+    }
+    .submenu .submenumobie >i{
+        transition:0.6s ease-out;
+     
+    }
+    .submenu .submenumobie:hover{
+        /* background-color: #1e3a8a; */
+        color: #c74817;
+
+     }
+    .submenu .submenumobie:hover >a{
+      
+        color: #c74817;
+    }
+    .submenu .submenumobie:hover >i{
+        transform: rotate(90deg);
+   
+    }
+   
+    .submenu {
+        position: absolute;
+        background-color: white;
+        min-width: max-content;
+        left: 0;
+        display: none;
+    }
+    /* sub menu child */
+    .submenuchild {
+        position: absolute;
+        left: 100%;
+        background-color: white;
+        min-width: max-content;
+        top: 0;
+        display: none;
+    }
+    /* show menu on hover */
+    .menu li:hover>.submenu {
+        display: block;
+        animation: slideup .3s ease;
+    }
+    .submenu li:hover>.submenuchild {
+        display: block;
+        animation: slideleft .3s ease;
+    }
+    .mobilemenu {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+  
+    .logo{
+        display: none;
+    }
+    .mobilemenu {
+        display: flex;
+        justify-content: space-between;
+    }
+    #header {
+        display: none;
+    }
+    .category {
+        
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        /* color: white; */
+        font-weight: 500;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .category >a > img{
+  
+        width: 200px;
+        height: 40px;
+    }
+    .mobilemenu {
+        display: flex;
+        justify-content: space-between;
+        background-color: #faebd7;
+    }
+    nav {
+        background-color: #faebd7;
+        /* color: white; */
+    }
+    .menu a {
+        display: block;
+        /* width: 100%; */
+        padding: 1rem;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    #navmenu{
+        display: none;
+    }
+    .menu .menumobie{
+        display: flex;
+        align-items: center;
+    }
+    .submenu {
+        padding: 0 1rem;
+    }
+    .submenu .submenumobie{
+        display: flex;
+        align-items: center;
+    }
+    .submenuchild {
+        padding: 0 1rem;
+    }
+    .menu a:hover {
+        background-color: white;
+        color: #c74817;
+    }
+    .menu .submenu {
+        display: none;
+    }
+    .menu .submenu .submenuchild{
+        display: none;
+    }
+}
