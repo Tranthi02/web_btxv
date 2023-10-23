@@ -21,7 +21,6 @@ class ThucphamquangtrangController extends Controller
             'tintuchoatdong' => $tintuchoatdong,
             'sanphamnoibat' => $sanphamnoibat,
             'videomsx' => $videomsx,
-            //
         ]);
     }
 

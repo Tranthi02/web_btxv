@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\DB;
 class KyanhController extends Controller
 {
     //
-    //
  
     public function trangchu()
     {       

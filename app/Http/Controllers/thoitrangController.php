@@ -20,7 +20,6 @@ class thoitrangController extends Controller
         $tintuc3 = Post::where('category_id', '=', 17)->orderBy('id', 'desc')->take(1)->get();
         //  return $tintuc3;
         // $video = Video::orderBy('id', 'desc')->take(2)->get();
-        //
        
         return view('thoitrang.posts.home', [
              'tintuc1' => $tintuc1,

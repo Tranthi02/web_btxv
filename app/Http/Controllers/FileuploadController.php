@@ -13,7 +13,6 @@ class FileuploadController extends Controller
 {
     //
     // Chuẩn hóa ký tự tiếng việt
-    //
     public function convert_vi_to_en($str)
     {
         $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", "a", $str);

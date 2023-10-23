@@ -10,7 +10,6 @@ class BannerController extends Controller
     //
      // public function listpost() {
     //     $post = Post::all();
-     //   
 
     //     return $post;
     // }
