@@ -13,6 +13,7 @@ use App\Models\Video;
 class GaSachSonKyController extends Controller
 {
     //
+    //
  
     public function trangchu()
     {

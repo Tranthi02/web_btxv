@@ -11,6 +11,7 @@ class OcbuoudenController extends Controller
 {
     public function trangchu()
     {
+        //
        $sanphambanchay = Sanpham::where('category_id', '=', 31)->where('spnoibat', '=', 1)->orderBy('id', 'desc')->take(4)->get();
        $sanphammoi = Sanpham::where('category_id', '=', 32)->where('spchinh', '=', 1)->orderBy('id', 'desc')->take(4)->get();
        $ocgiong = Sanpham::where('category_id', '=', 33)->where('spchinh', '=', 1)->where('spnoibat', '=', 1)->orderBy('id', 'desc')->take(3)->get();

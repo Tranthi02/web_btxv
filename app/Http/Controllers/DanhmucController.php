@@ -31,6 +31,7 @@ class DanhmucController extends Controller
             // 'tendm' => $tendm,
             // 'tentrc' => $tentrc,
             //'noibat2' => $noibat2,
+            //
         ]);
     }
 

@@ -22,7 +22,7 @@ class LonrunglaikysonController extends Controller
             'sanphamhuonghuuco' => $sanphamhuonghuuco,
             // 'video' => $video,
             // 'tintucmoi' => $tintucmoi,
-            
+            //
         ]);
     }
 

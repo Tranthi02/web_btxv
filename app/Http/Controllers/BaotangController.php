@@ -287,6 +287,7 @@ class BaotangController extends Controller
     {
         $baiganday = Post::orderBy('id', 'asc')->take(3)->get();
 
+        //
         $timkiem = $request->input('search');
         $baigandays = $baiganday->pluck('id')->toArray();
         $baixemnhieunhat = Post::whereNotIn('id', $baigandays)->orderBy('id', 'asc')->take(3)->get();

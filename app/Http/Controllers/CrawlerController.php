@@ -16,7 +16,7 @@ class CrawlerController extends Controller
         $url = 'http://www.btxvnt.org.vn/tin-trong-nuoc-cat1071';
 
         $client = new Client();
-
+        //
         $crawler = $client->request('GET', $url);
         $crawler->filter('.post-image .post-heading')->each(
             function (Crawler $node) {
