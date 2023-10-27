@@ -50,25 +50,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
 
 
-        $banner = Sanpham::orderBy('id', 'desc')->take(3)->get();
-        $index = [];
-        foreach($banner as $bn){
-            array_push($index, $bn->id);
-        }
-        $baiviet_2 = Sanpham::orderBy('id', 'desc')->take(4)->get();
-        foreach($baiviet_2 as $bv_2){
-            array_push($index, $bv_2->id);
-        }
-
-        // return $baiviet_3;
-        $tintuc = Sanpham::whereNotIn('id', $index)->orderBy('id', 'desc')->take(4)->get();
-        // return $baiviet_4;
-        
-        
-        View::share('tintuc',  $tintuc);
-        View::share('chitietsanpham',  $tintuc);
-        // View::share('banner', $banner);
-        
+       
         // Paginator::useBootstrap();
 
         

@@ -18,33 +18,32 @@ class BaotangController extends Controller
 {
     public function trangchu()
     {
-        //tin tức nổi bật
         $tintucnoibat = Post::where('category_id', '=', 32)->where('noibat', '=', 1)->orderBy('id', 'desc')->take(3)->get();
-
-        //tin tức mới
         $tintucmoi = Post::where('category_id', '=', 32)->where('noibat', '=', 2)->orderBy('id', 'desc')->take(4)->get();
 
-        //slide
-        $slide = Thuvienanh::orderBy('id', 'desc')->take(4)->get();
+        $slide = Thuvienanh::orderBy('id', 'asc')->take(4)->get();
+       
+        $excludedIds = $slide->pluck('id'); // Lấy danh sách ID từ biến $slide
+        $records = Thuvienanh::whereNotIn('id', $excludedIds)->take(4)->get();
         
-        //video
+        $suutaphv = Post::where('category_id', 53)->orderBy('id', 'desc')->first();
         $video = Video::orderBy('id', 'desc')->first();
 
-        //sưu tập hiện vật
-        $suutaphv = Post::where('category_id', 53)->orderBy('id', 'desc')->first();
         $Posts_idsuutaphv = [];
         $Posts_idsuutaphv[] = $suutaphv->id;
         $suutaphvs = Post::whereNotIn('id', $Posts_idsuutaphv)->where('category_id', '=', 53)->orderBy('id', 'desc')->take(4)->get();
 
-        //di tích
+
         $ditich = Post::where('category_id', 40)->orderBy('id', 'asc')->first();
+        // return $toadam;
+
         $Posts_idditich = [];
         $Posts_idditich[] = $ditich->id;
         $ditichs = Post::whereNotIn('id', $Posts_idditich)->where('category_id', '=', 40)->orderBy('id', 'asc')->take(3)->get();
 
 
 
-        //lấy ra danh nhân cách mạng bài viết
+        //-----------
         $danhnhancm = Post::where('category_id', 41)->orderBy('id', 'asc')->first();
         $Posts_iddanhnhancm = [];
         $Posts_iddanhnhancm[] = $danhnhancm->id;
@@ -54,31 +53,35 @@ class BaotangController extends Controller
         foreach ($danhnhancms as $post) {
             $Posts_iddanhnhancm3[] = $post->id;
         }
-        //danh nhân cách mạng
+
         $danhnhancmss = Post::whereNotIn('id', $Posts_iddanhnhancm3)->where('id', '!=', $danhnhancm->id)->where('category_id', 41)->orderBy('id', 'asc')->take(8)->get();
 
-        //sự kiện
+        // return $Posts_iddanhnhancm4;
+
+
         $sukien = Post::where('category_id', 42)->orderBy('id', 'asc')->first();
+
         $Posts_idsukien = [];
         $Posts_idsukien[] = $sukien->id;
         $sukiens = Post::whereNotIn('id', $Posts_idsukien)->where('category_id', '=', 42)->orderBy('id', 'asc')->take(3)->get();
 
-        //hiện vật
+
         $hienvat = Post::where('category_id', 52)->orderBy('id', 'asc')->first();
+
         $Posts_idhienvat = [];
         $Posts_idhienvat[] = $hienvat->id;
         $hienvats = Post::whereNotIn('id', $Posts_idhienvat)->where('category_id', '=', 52)->orderBy('id', 'asc')->take(4)->get();
 
-        //ấn phẩm bảo tàng
+
         $anphambaotang = Post::where('category_id', 54)->orderBy('id', 'asc')->first();
+
         $Posts_idanphambaotang = [];
         $Posts_idanphambaotang[] = $anphambaotang->id;
         $anphambaotangs = Post::whereNotIn('id', $Posts_idanphambaotang)->where('category_id', '=', 54)->orderBy('id', 'asc')->take(4)->get();
 
-        //cảm tưởng
+
         $camtuong = Camtuong::all();
 
-        //hồ sơ chiến sỹ 
         $getthoiki = Thoikihoatdong::whereIn('id', [1, 2, 3])->get();
 
         foreach ($getthoiki as $tk) {
@@ -87,11 +90,8 @@ class BaotangController extends Controller
         }
 
         // return $getthoiki;
-
-        //thanh nổi bật menu
         $noibat = Post::where('category_id', '=', 32)->where('noibat', '=', 1)->orderBy('id', 'asc')->take(4)->get();
 
-        //liên kết website
         $lienketwebsite = Lienketwebsite::orderBy('thutu', 'desc')->take(10)->get();
 
 
@@ -99,6 +99,9 @@ class BaotangController extends Controller
 
             'tintucnoibat' => $tintucnoibat,
             'tintucmoi' => $tintucmoi,
+
+            'records' => $records,
+
 
 
 
@@ -208,7 +211,7 @@ class BaotangController extends Controller
         $baigandays = $baiganday->pluck('id')->toArray();
         $baixemnhieunhat = Post::whereNotIn('id', $baigandays)->orderBy('id', 'asc')->take(3)->get();
 
-        //phân trang
+
         $baiviets = Post::paginate(6);
 
         $returnv = Post::where('category_id', $getdanhmuc->id)->orderBy('id', 'asc')->count();
@@ -345,8 +348,14 @@ class BaotangController extends Controller
 
         $baiviets = Post::paginate(6);
 
+        // $returnv = Post::where('category_id', $danhmucha->id)->orderBy('id', 'asc')->count();
+
         // Query Parent_id - Post
         $danhmucc = Category::where('parent_id', $danhmuccha)->where('hienthi', '=', 1)->orderBy('thutu', 'asc')->get();
+        // return $danhmuc;
+        // $parent_p = getDanhmuc(null);
+
+        // return $parent_p;
 
         $datas = array();
         foreach ($danhmucc as $dm) {
@@ -377,7 +386,7 @@ class BaotangController extends Controller
             $p['baiviet'] = Post::where('category_id', $list_id)->orderBy('id', 'asc')->take(3)->get();
             array_push($list, $p,);
         }
-        return $list;
+        //return $list;
        
         return view('baotangxoviet.posts.post_child', [
             'danhmucc' => $danhmucc,
