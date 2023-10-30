@@ -83,7 +83,7 @@
 
     .box-post p {
         width: 280px;
-        margin-left: 5px;
+        margin-left: 9px;
         font-size: 18px;
     }
 

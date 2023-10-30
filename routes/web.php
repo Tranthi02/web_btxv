@@ -44,14 +44,10 @@ Route::get('/bai-viet/{slug}', [BaotangController::class, 'baiviet'])->name('bao
 Route::get('/ho-so-chien-sy', [BaotangController::class, 'hosochiensy'])->name('baotangxoviet.posts.hosochiensy');
 Route::get('/videos', [BaotangController::class, 'videos'])->name('baotangxoviet.posts.videos');
 Route::get('/danh-muc/{slug}', [BaotangController::class, 'danhmuc'])->name('danhmuc');
-
 Route::get('/tim-kiem', [BaotangController::class, 'timkiem'])->name('baotangxoviet.posts.searchpost');
 Route::get('/ajax-title/{name}', [BaotangController::class, 'timkiemtitle'])->name('liendoan.timkiemtitle');
-
 Route::get('/post-child/{danhmuc}', [BaotangController::class, 'postFromMenu'])->name('baotangxoviet.posts.post_child');
-
 // Crawler Data 
-
 Route::get('/craw-data', [CrawlerController::class, 'index'])->name('baotangxoviet.posts.post_child');
 
 

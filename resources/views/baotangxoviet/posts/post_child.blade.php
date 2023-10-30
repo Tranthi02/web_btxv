@@ -141,10 +141,10 @@
                                 <div class="box-post">
 
                                     <img src="/storage/{{$bgd->thumbnail}}" alt="">
-                                    <p class="fix-title"><a href="/chi-tiet-bai-viet/{{$bgd->slug}}">{{$bgd->title}}</a></p>
+                                    <p class="fix-title pt-2"><a href="/chi-tiet-bai-viet/{{$bgd->slug}}">{{$bgd->title}}</a></p>
 
                                 </div>
-                                <span class="date fix-title">Ngày: {{$bgd->created_at}}</span>
+                                <span class="date fix-title text-xs">Ngày: {{$bgd->created_at}}</span>
                             </li>
                             @endforeach
                             <!-- <li>
