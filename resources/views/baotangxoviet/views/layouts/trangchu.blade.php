@@ -466,7 +466,7 @@
             function startCarousel() {
                 carouselInterval = setInterval(() => {
                     options("right");
-                }, 5000); // Change slide every 5 seconds
+                }, 5000); // Change slide every 5 seconds aaaaa
             }
 
             startCarousel();
