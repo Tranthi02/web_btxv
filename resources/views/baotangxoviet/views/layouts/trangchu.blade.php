@@ -466,7 +466,7 @@
             function startCarousel() {
                 carouselInterval = setInterval(() => {
                     options("right");
-                }, 5000); // Change slide every 5 seconds aaaaa
+                }, 5000); // Change slide every 5 seconds 
             }
 
             startCarousel();
@@ -485,7 +485,7 @@
             // Adjust the number of items to show based on screen size
             function adjustItemsInView() {
                 if (window.innerWidth <= 768) {
-                    maxSlides = carouselItems.length; // Show all items on mobile
+                    maxSlides = carouselItems.length; // Show all items on mobile aaa
                 } else {
                     maxSlides = Math.ceil(carouselItems.length / itemsInViewDesktop);
                 }
